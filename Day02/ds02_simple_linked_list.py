@@ -23,6 +23,34 @@ def printNodes(start) :
         else :
             print(current.data, end=' -> ')
 
+# 노드 추가 
+def insertNode(findData,insertData) :
+    global memory, head, current, pre
+
+    if head.data == findData :
+        node = Node()
+        node.data = insertData
+        node.link = head
+        head = node
+        return
+
+    current = head # 제일 앞으로
+    while current.link != None :
+        pre = current
+        current = current.link
+        if current.data == findData :
+            node = Node()
+            node.data = insertData
+            node.link = current
+            pre.link = node
+            return 
+
+    node = Node()
+    node.data = insertData
+    current.link = node
+    return
+
+
 if __name__ == '__main__' :
     node = Node()
     node.data = dataArrary[0]
@@ -37,4 +65,3 @@ if __name__ == '__main__' :
         memory.append(node)
 
     printNodes(head)
-    
