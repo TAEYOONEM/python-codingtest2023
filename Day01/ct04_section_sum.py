@@ -19,11 +19,13 @@ input = sys.stdin.readline # 입력속도 개선, 주피터 노트북에서는 �
 #     ii, jj = map(int,input().split())
 #     print(prefix_sum[jj]-prefix_sum[ii-1])   
 
-n ,m = map(int,input().split())
-arr = list()
-for i in range(n) :
-    arr += [list(map(int,input().split()))]
-print(arr)
+############# 구간 합 구하기 2
+
+# n ,m = map(int,input().split())
+# arr = list()
+# for i in range(n) :
+#     arr += [list(map(int,input().split()))]
+# print(arr)
 
 # temp = 0
 # prefix_sum = list()
@@ -37,6 +39,7 @@ print(arr)
 #     x, y = map(int,input().split())
 #     prefix_sum[x-1][y-1] - prefix_sum[x-1][y-3]
 #     + prefix_sum[x-2][y-1] -prefix_sum[x-2][y-3]
+
 
 
 
