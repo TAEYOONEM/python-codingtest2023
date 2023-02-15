@@ -8,19 +8,15 @@ for i in range(n) :
     if arr[i] > max :
         max = arr[i]
 
-brr = [0 for _ in range(max+1)] # 등장 횟수
-crr = [0 for _ in range(max+1)] # 누적합
+cnt_arr = [0 for _ in range(max+1)] # 등장 횟수
+sum_arr = [0 for _ in range(max+1)] # 누적합
 
 for i in range(n) :
-    brr[arr[i]] += 1 
+    cnt_arr[arr[i]] += 1 
 
-for i in range(1,n+1) :
-    for j in range(1,i+1) :
-        crr[i] += brr[j]  
+sum_arr[0] = cnt_arr[0]
+for i in range(1,max+1) :
+    sum_arr[i] = sum_arr[i-1] + cnt_arr[i]
 
-drr = [None for _ in range(n)]
-for i in arr :
-    drr[crr[i]] = i
-    crr[i] -= 1
 
-print(drr) 
+
