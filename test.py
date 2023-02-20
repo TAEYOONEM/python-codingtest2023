@@ -1,4 +1,5 @@
 import sys
+<<<<<<< Updated upstream
 cnt = 0
 def mergeSort(arr) : 
     
@@ -34,3 +35,10 @@ input = sys.stdin.readline
 n, k = map(int,input().split())
 arr = list(map(int,input().split()))
 mergeSort(arr)
+=======
+n = int(sys.stdin.readline()) 
+arr = list(map(int,sys.stdin.readline().split()))
+result = sorted(list(set(arr)))
+for i in arr :
+    print(result.index(i),end=' ')
+>>>>>>> Stashed changes

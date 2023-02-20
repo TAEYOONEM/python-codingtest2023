@@ -36,6 +36,7 @@ if __name__ == "__main__" :
 
     print("무방향 그래프")
     printGraph(G1)
+    
 
 
 
