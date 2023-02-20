@@ -1,9 +1,13 @@
+<<<<<<< Updated upstream
 import sys
 <<<<<<< Updated upstream
 cnt = 0
 def mergeSort(arr) : 
     
     global cnt
+=======
+x666 666x x666 x666x 666xx x666x  
+>>>>>>> Stashed changes
 
     if len(arr) < 2 :
         return arr
@@ -12,6 +16,7 @@ def mergeSort(arr) :
     left_arr = mergeSort(arr[:mid])
     right_arr = mergeSort(arr[mid:])
 
+<<<<<<< Updated upstream
     l = r = 0
     tmp=[]
 
@@ -30,6 +35,14 @@ def mergeSort(arr) :
         tmp += left_arr[l:]
     
     return tmp
+=======
+num = 666
+x = 0
+x += 1  
+num += x*1000
+if x = 9
+num *= 10
+>>>>>>> Stashed changes
 
 input = sys.stdin.readline
 n, k = map(int,input().split())
