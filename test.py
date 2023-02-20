@@ -1,20 +1,36 @@
-tower1 = [5,4,3,2,1]
-tower2 = []
-tower3 = []
+import sys
+cnt = 0
+def mergeSort(arr) : 
+    
+    global cnt
 
+    if len(arr) < 2 :
+        return arr
+    
+    mid = len(arr) // 2
+    left_arr = mergeSort(arr[:mid])
+    right_arr = mergeSort(arr[mid:])
 
-def hanoi(n) :
-    global tower1,tower2,tower3
-    while True :
-        if move(tower1,tower2) :
-            break
-        elif move    
+    l = r = 0
+    tmp=[]
 
-def move(arr1,arr2) :
-    if len(arr2) == 0 or arr1[-1] < arr2[-1] :
-        arr2.append(arr1[-1])
-        arr1.pop() 
-        return True
+    while l < len(left_arr) and r < len(right_arr) :
+        
+        if left_arr[l]  < right_arr[r] :
+            tmp.append(left_arr[l])
+            l += 1
+        else :
+            tmp.append(right_arr[r])
+            r += 1
+
+    if l >= len(left_arr) :
+        tmp += right_arr[r:]
     else :
-        return False
+        tmp += left_arr[l:]
+    
+    return tmp
 
+input = sys.stdin.readline
+n, k = map(int,input().split())
+arr = list(map(int,input().split()))
+mergeSort(arr)
